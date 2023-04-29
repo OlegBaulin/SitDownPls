@@ -1,0 +1,32 @@
+.crumps {
+  margin-bottom: 10px;
+  padding-top: 21px;
+  padding-bottom: 10px;
+
+  &__list {
+    @include flex;
+  }
+
+  &__item {
+    margin-right: 4px;
+    color: var(--color-dusty-gray);
+
+    &:not(:last-child) {
+      &::after {
+        content: " / ";
+      }
+    }
+
+    &:last-child {
+      color: var(--color-purple-heart);
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  @include mobile-album {
+    display: none;
+  }
+}
